@@ -10,7 +10,9 @@
 //             return element.name;
 //         }
 //     })
-//     console.log(asia);
+//     aisa.forEach((element)=>{
+// console.log(element.name.common);
+// });
 // // }
 
 
