@@ -75,28 +75,25 @@
 //Print the country that uses US dollars as currency.
 
 
-// const getUSDollar = () => {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("GET", "https://restcountries.com/v3.1/all", true);
-  
-//     xhr.responseType = "json";
-  
-//     xhr.onload = () => {
-  
-//       const data = xhr.response;
-//       const datas = data.filter((value) => {
-//         for (var i in value.currencies.name.USD) {
-//           if (i === "Unites States Dollar") {
-//             return true;
-//           }
-//         }
-//       }).map((value) => value.name);
-//       console.log(datas);
+// const request = new XMLHttpRequest();
+// request.open("GET", "https://restcountries.com/v3.1/all");
+// request.send();
+// request.onload = function () {
+//   const data = JSON.parse(this.response);
+//   console.log(data);
+//   const dollar_using_countries = data.filter((element) => {
+//     for (const key in element.currencies) {
+//       console.log("key: ", key);
+//       for (const item in element.currencies[key]) {
+//         console.log("item: ", item);
+//         return element.currencies[key][item] == "United States dollar";
+//       }
 //     }
-//     xhr.send();
-//   };
-  
-//   getUSDollar();
+//   });
+//   dollar_using_countries.forEach((element) => {
+//     console.log(element.name.common);
+//   });
+// };
 
 
 
